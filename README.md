@@ -1,22 +1,23 @@
+# WCO Reporting Tool
+## Deriving metrics from WCO Usage Report Exports
 
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+To use this tool:
 
+select Usage Report from under the Reports tab in WCO
 
-Welcome to your Node.js project on Cloud9 IDE!
+Choose your check-out center
+select all states ( Checkout, completed.... etc)
+select start date and time
+select end date and time
 
-This chat example showcases how to use `socket.io` with a static `express` server.
-
-## Running the server
-
-1) Open `server.js` and start the app by clicking on the "Run" button in the top menu.
-
-2) Alternatively you can launch the app from the Terminal:
-
-    $ node server.js
-
-Once the server is running, open the project in the shape of 'https://projectname-username.c9.io/'. As you enter your name, watch the Users list (on the left) update. Once you press Enter or Send, the message is shared with all connected clients.
+ensure the following result collumns are included in your output:
+    "Patron Department"
+    "Effective Patron Class"
+    "Item Names"
+    Summary
+    "Pickup Time"
+    "Actual Return Time"
+    "Effective Return Time"
+    "Return Time"
+    State 
+    Patron

@@ -54,12 +54,14 @@ function getMPHTally(data){
 function getEquipment(data){
     // equipData.push(data['Item Names'])
     // console.log(data['Item Names']);
-    equipData.push(data.Summary);
+    // equipData.push(data.Summary);
     
-    for (var i = 0; i < equipData.length - 1; i++) {
-        resType.push(getResType(equipData[i]));
-        getEquType(equipData[i]);
-    }
+    pickUpTime(data['Pickup Time']);
+    
+    // for (var i = 0; i < equipData.length - 1; i++) {
+    //     resType.push(getResType(equipData[i]));
+    //     getEquType(equipData[i]);
+    // }
     
     
     
@@ -69,7 +71,20 @@ function getEquipment(data){
 }
 
 function pickUpTime(data){
-   console.log(data['Pickup Time']);
+    var d = new Date(data);
+    var n = d.getDay();
+    
+    var weekday = new Array(7);
+    weekday[0]=  "Sunday";
+    weekday[1] = "Monday";
+    weekday[2] = "Tuesday";
+    weekday[3] = "Wednesday";
+    weekday[4] = "Thursday";
+    weekday[5] = "Friday";
+    weekday[6] = "Saturday";
+    
+   console.log(n);
+   
     
 }
 
@@ -88,5 +103,5 @@ function getEquType(data){
         eqtypetot.push(eqtype[i]);
     }
     console.log(restype);
-    console.log(eqtype);
+    console.log(eqtypetot);
 }
