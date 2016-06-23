@@ -14,8 +14,8 @@
     
 ### How To Use: 
     • In Web Check Out:
-        • Select **Usage Report** from under the **Reports** tab in WCO
-        • Choose your **Check-out Center**
+        • Select Usage Report from under the Reports tab in WCO
+        • Choose your Check-out Center
         • Select all states ( Checkout, completed.... etc)
         • Select start date and time
         • select end date and time
@@ -31,3 +31,7 @@
             • State 
             • Patron
         • export results as a CSV
+    • Exporting graphs/readable report: 
+        • Equipment Bar Charts -- coming soon.
+        • Day Line Charts (Checkouts/Returns per hour) -- coming soon.
+        • Major distribution chart -- coming soon.         
