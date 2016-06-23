@@ -1,5 +1,4 @@
-# Universal WCO Reporting Tool
-## Deriving metrics from WCO Usage Report Exports
+# Universal WCO Reporting Tool: Deriving metrics from WCO Usage Report Exports
 
 ### Metrics included:
     • Major Code
@@ -13,18 +12,16 @@
     • Late return (by hour amount)
     • Frequent students
     
-    
+### How To Use: 
 
-To use this tool:
+#### In Web Check Out:
+ • Select **Usage Report** from under the **Reports** tab in WCO
+     • Choose your check-out center
+     • select all states ( Checkout, completed.... etc)
+     • select start date and time
+     • select end date and time
 
-select Usage Report from under the Reports tab in WCO
-
-Choose your check-out center
-select all states ( Checkout, completed.... etc)
-select start date and time
-select end date and time
-
-ensure the following result collumns are included in your output:
+ • ensure the following result collumns are included in your output:
     "Patron Department"
     "Effective Patron Class"
     "Item Names"
@@ -36,4 +33,4 @@ ensure the following result collumns are included in your output:
     State 
     Patron
 
-export results as a CSV
+ • export results as a CSV
