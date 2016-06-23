@@ -23,20 +23,38 @@ var csvData = [];
 var equipData = [];
 var resType = [];
 
+var weekday = new Array(7);
+    weekday[0]=  "Sunday";
+    weekday[1] = "Monday";
+    weekday[2] = "Tuesday";
+    weekday[3] = "Wednesday";
+    weekday[4] = "Thursday";
+    weekday[5] = "Friday";
+    weekday[6] = "Saturday";
+
 
 // load csv file
 csv
- .fromStream(stream, {headers : true})
+ .fromStream(stream, {headers : true}) // take what has a header!
  .validate(function(data){
-     getEquipment(data)
-    //  getMPHTally(data);
-    //  return data.Patron == "James L. Ramer"; //all persons must be under the age of 50 
+    // insert limitations (validations) if needed
+    // for example if i only want to see Jim!
+    //  return data.Patron == "James L. Ramer"; // only Jim for testing
  })
  .on("data-invalid", function(data){
      //do something with invalid row 
  })
  .on("data", function(data){
-     console.log(data);
+     
+    // parse data
+    
+    // create clean object
+    
+     
+    //  console.log(data);
+    //  getEquType(data.Summary);
+    //  getMPHTally(data);
+    pickUpTime(data['Pickup Time']);
  })
  .on("end", function(){
     //  console.log(equipData);
@@ -48,7 +66,7 @@ csv
 
 function getMPHTally(data){
     // console.log(data['Patron Department']);
-    return data['Patron Department'] = 'MPH'; //all persons must be under the age of 50 
+    // return data['Patron Department'] = 'MPH'; //all persons must be under the age of 50 
 }
 
 function getEquipment(data){
@@ -56,7 +74,7 @@ function getEquipment(data){
     // console.log(data['Item Names']);
     // equipData.push(data.Summary);
     
-    pickUpTime(data['Pickup Time']);
+    // pickUpTime(data['Pickup Time']);
     
     // for (var i = 0; i < equipData.length - 1; i++) {
     //     resType.push(getResType(equipData[i]));
@@ -73,17 +91,11 @@ function getEquipment(data){
 function pickUpTime(data){
     var d = new Date(data);
     var n = d.getDay();
+    var h = d.getHours();
     
-    var weekday = new Array(7);
-    weekday[0]=  "Sunday";
-    weekday[1] = "Monday";
-    weekday[2] = "Tuesday";
-    weekday[3] = "Wednesday";
-    weekday[4] = "Thursday";
-    weekday[5] = "Friday";
-    weekday[6] = "Saturday";
-    
-   console.log(n);
+
+    // return weekday[n];
+    console.log("total date: " + data + " | day: " + weekday[n] + " | time: " + h);
    
     
 }

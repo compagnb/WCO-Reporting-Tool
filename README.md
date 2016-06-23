@@ -1,5 +1,19 @@
-# WCO Reporting Tool
+# Universal WCO Reporting Tool
 ## Deriving metrics from WCO Usage Report Exports
+
+### Metrics included:
+    * Major Code
+    * Faculty/Staff/Student
+    * Equipment (for purchasing, and loaner gear)
+    * Day/Time of Checkout (for scheduling)
+    * Day/Time of Checkin (for scheduling)
+
+### Optional Metrics Included:
+    * Status of reservation (reservations never picked up)
+    *  Late return (by hour amount)
+    * Frequent students
+    
+    
 
 To use this tool:
 
@@ -21,3 +35,5 @@ ensure the following result collumns are included in your output:
     "Return Time"
     State 
     Patron
+
+export results as a CSV
